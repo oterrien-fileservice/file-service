@@ -1,0 +1,29 @@
+logging:
+  level:
+    org.springframework.web: WARN
+    com.ote.file: INFO
+
+server.port: 8081
+
+security.basic.enabled: false
+
+spring:
+  application.name: FILE SERVICE
+  profiles.active: console-log
+  main.banner-mode: LOG
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  http.multipart.enabled: true
+
+service:
+  lock.timeout.seconds: 10
+  upload:
+    create:
+      replace-if-found: true
+    append:
+      create-if-not-found: true
+
+redis:
+  enabled: false
